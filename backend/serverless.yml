@@ -1,7 +1,7 @@
 # TODO: Change the name of the org 
-org: newthingade
-app: serverless-udapeople
-service: serverless-udapeople
+org: kabeerudacity
+app: serverless-todo
+service: serverless-todo
 
 plugins:
   - serverless-webpack
@@ -14,8 +14,8 @@ provider:
   name: aws
   runtime: nodejs12.x
  # lambdaHashingVersion: '20201221'
-  stage: ${opt:stage, 'prod'}
-  region: ${opt:region, 'us-east-2'}
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
 
   tracing:
     lambda: true
@@ -24,9 +24,9 @@ provider:
   # Use these variables in the functions and resouorces section below. For example, 
   # ${self:provider.environment.ATTACHMENT_S3_BUCKET}
   environment:
-    PROJECT_NAME: udapeople-serveless
-    TODOS_TABLE: udapeople-serverless-${self:provider.stage}
-    S3_BUCKET_NAME: udapeop-serverless-${self:provider.stage}
+    PROJECT_NAME: serverless-todo
+    TODOS_TABLE: serverless-todo-${self:provider.stage}
+    S3_BUCKET_NAME: kabeer-serverless-todo-${self:provider.stage}
 
 
 custom:
